@@ -15,6 +15,7 @@ RUN apt-get update && \
         texlive-generic-recommended \
         texlive-fonts-recommended \
         texlive-latex-base \
+        python-lxml \
         pstoedit \
         inkscape  && \
     apt-get clean && \
