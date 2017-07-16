@@ -9,9 +9,13 @@ LABEL maintainer "Xiangmin Jiao <xmjiao@gmail.com>"
 USER root
 WORKDIR /tmp
 
-# Install Inkscape
+# Install texlive and inkscape
 RUN apt-get update && \
     apt-get install -q -y --no-install-recommends \
+        texlive-generic-recommended \
+        texlive-fonts-recommended \
+        texlive-latex-base \
+        pstoedit \
         inkscape  && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
